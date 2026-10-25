@@ -1,0 +1,32 @@
+
+> backend@1.0.0 test:resiliencia
+> node scripts/prueba-resiliencia.mjs
+
+[ok] rechaza una capacitación previa fuera del catálogo
+[ok] rechaza una autoeficacia fuera del rango 1 a 5
+[ok] la creación repetida responde sin error
+[ok] el reintento recupera exactamente el mismo identificador de sesión
+[ok] no se duplicó la sesión
+[ok] las variables intervinientes quedan en la misma fila de la sesión
+[ok] la lista aleatoria se asignó una sola vez
+[ok] la primera recarga devuelve el primer estímulo de la lista original
+[ok] el primer ensayo registra el inicio de la sesión
+[ok] recargar antes de responder mantiene el mismo ensayo
+[ok] la primera respuesta se guarda correctamente
+[ok] responder dos veces el mismo ensayo devuelve HTTP 409
+[ok] tras responder, continúa el segundo estímulo de la lista original
+[ok] un reintento tras perder la conexión no genera un registro nuevo
+[ok] la sesión continúa en el punto correcto después del corte de red
+[ok] dos respuestas simultáneas guardan una sola y bloquean la otra con HTTP 409
+[ok] la secuencia avanza una sola posición tras respuestas simultáneas
+[ok] la lista aleatoria permanece idéntica después de recargas y fallos
+[ok] no se duplicaron las respuestas guardadas
+[ok] la sesión llega al final del recorrido
+[ok] la sesión terminada devuelve la duración total
+[ok] la base guarda inicio, fin y duración de la sesión
+[ok] el resumen administrativo devuelve la duración promedio y por sesión
+[ok] una sesión inexistente devuelve HTTP 404
+[ok] el endpoint de salud responde
+[ok] la exportación CSV incluye las variables y la duración de la sesión
+[ok] prueba de resiliencia completada
+[ok] datos de prueba eliminados

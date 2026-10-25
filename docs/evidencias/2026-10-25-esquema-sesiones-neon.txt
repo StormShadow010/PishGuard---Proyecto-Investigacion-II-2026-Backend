@@ -1,0 +1,17 @@
+Columnas de sesiones:
+id | uuid | nullable=NO
+programa | text | nullable=YES
+semestre | integer | nullable=YES
+area_tecnologica | boolean | nullable=YES
+creada_en | timestamp with time zone | nullable=NO
+consentimiento_en | timestamp with time zone | nullable=YES
+capacitacion_previa | text | nullable=YES
+frecuencia_uso | text | nullable=YES
+autoeficacia | smallint | nullable=YES
+iniciada_en | timestamp with time zone | nullable=YES
+finalizada_en | timestamp with time zone | nullable=YES
+
+Restricciones CHECK:
+sesiones_autoeficacia_check | CHECK (((autoeficacia >= 1) AND (autoeficacia <= 5)))
+sesiones_capacitacion_previa_check | CHECK ((capacitacion_previa = ANY (ARRAY['formal'::text, 'informal'::text, 'no'::text])))
+sesiones_frecuencia_uso_check | CHECK ((frecuencia_uso = ANY (ARRAY['diaria'::text, 'varias_semana'::text, 'semanal'::text, 'mensual'::text, 'nunca'::text])))
